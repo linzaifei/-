@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShowViewController : UIViewController
+@interface ShowViewController : UIViewController<UIViewControllerTransitioningDelegate>
 
 @end

@@ -24,50 +24,50 @@
 
 - (IBAction)sender:(UIButton *)sender {
     ShowViewController *showViewController = [[ShowViewController alloc] init];
-    showViewController.transitioningDelegate = self;
-    showViewController.modalPresentationStyle = UIModalPresentationCustom;
+//    showViewController.transitioningDelegate = self;
+//    showViewController.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:showViewController animated:YES completion:NULL];
     
 }
 
-/**
-  返回负责转场的控制器对象
-
- @param presented 展示的控制器
- @param presenting ..
- @param source 发起的控制器
- @return <#return value description#>
- */
-- (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source {
-    ShowPresentController *showPresentController = [[ShowPresentController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
-    
-    return showPresentController;
-}
-
-
-/**
-  返回负责提供 Modal 动画对象
-
- @param presented <#presented description#>
- @param presenting <#presenting description#>
- @param source <#source description#>
- @return <#return value description#>
- */
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
-    return [[CustomTransition alloc] initWithTransition:YES];
-}
-
-
-/**
- 返回负责 dismiss 动画对象
-
- @param dismissed <#dismissed description#>
- @return <#return value description#>
- */
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
-    
-    return [[CustomTransition alloc] initWithTransition:NO];
-}
+///**
+//  返回负责转场的控制器对象
+//
+// @param presented 展示的控制器
+// @param presenting .发起的控制器
+// @param source <#return value description#>
+// @return <#return value description#>
+// */
+//- (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(nullable UIViewController *)presenting sourceViewController:(UIViewController *)source {
+//    ShowPresentController *showPresentController = [[ShowPresentController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+//    
+//    return showPresentController;
+//}
+//
+//
+///**
+//  返回负责提供 Modal 动画对象
+//
+// @param presented 展示的控制器
+// @param presenting 发起的控制器
+// @param source <#source description#>
+// @return <#return value description#>
+// */
+//- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+//    return [[CustomTransition alloc] initWithTransition:YES];
+//}
+//
+//
+///**
+// 返回负责 dismiss 动画对象
+//
+// @param dismissed <#dismissed description#>
+// @return <#return value description#>
+// */
+//- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+//    
+//    return [[CustomTransition alloc] initWithTransition:NO];
+//}
 
 
 - (void)didReceiveMemoryWarning {

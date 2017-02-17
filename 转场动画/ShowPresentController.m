@@ -8,6 +8,7 @@
 
 #import "ShowPresentController.h"
 
+#define frameOffset 200 //距离顶部高度
 @interface ShowPresentController()
 @property(strong,nonatomic)UIView *bgView;
 @end
@@ -25,7 +26,6 @@
     if(self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController]){
     
         
-        
     }
     
     NSLog(@"%@",presentedViewController);
@@ -34,6 +34,7 @@
 }
 
 -(void)presentationTransitionWillBegin{
+    self.presentedViewController.view.layer.cornerRadius = 10;
     [self.containerView addSubview:self.presentingViewController.view];
     [self.containerView addSubview:self.bgView];
     
@@ -43,15 +44,12 @@
         self.presentingViewController.view.transform = CGAffineTransformScale(self.presentingViewController.view.transform, 0.92, 0.92);
     } completion:nil];
     
-    
 }
 
 - (BOOL)shouldRemovePresentersView{
     return NO;
 }
 
-
-//在呈现过渡结束时被调用的
 //如果呈现没有完成，那就移除背景 View
 - (void)presentationTransitionDidEnd:(BOOL)completed{
     if (!completed) {
@@ -59,12 +57,10 @@
     }
 }
 - (void)dismissalTransitionWillBegin{
-
     [self.presentingViewController.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
         self.bgView.alpha = 0.0;
         self.presentingViewController.view.transform = CGAffineTransformIdentity;
     } completion:nil];
-    
 }
 - (void)dismissalTransitionDidEnd:(BOOL)completed{
     if (completed) {
@@ -75,9 +71,20 @@
 }
 
 
+
+/**
+   将要布局
+ */
 - (void)containerViewWillLayoutSubviews{
     
   
+}
+
+/**
+ 已经布局
+ */
+-(void)containerViewDidLayoutSubviews{
+
 }
 
 -(UIView *)bgView{
@@ -92,12 +99,13 @@
 }
 -(void)close{
     [self.presentedViewController dismissViewControllerAnimated:YES completion:NULL];
-    
 }
 
 -(CGRect)frameOfPresentedViewInContainerView{
+    
+    CGRect toFrame = self.presentingViewController.view.bounds;
 
-    return  CGRectMake(0, 260,375, 667-260);
+    return CGRectMake(toFrame.origin.x,frameOffset, toFrame.size.width, toFrame.size.height - frameOffset);
 }
 
 @end
