@@ -15,6 +15,9 @@
 		35B3A3C81E55491F00CD7E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35B3A3C61E55491F00CD7E6E /* LaunchScreen.storyboard */; };
 		35B3A3D31E55492100CD7E6E /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B3A3D21E55492100CD7E6E /* ____Tests.m */; };
 		35B3A3DE1E55492200CD7E6E /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B3A3DD1E55492200CD7E6E /* ____UITests.m */; };
+		35B3A3ED1E554A4500CD7E6E /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B3A3EC1E554A4500CD7E6E /* ShowViewController.m */; };
+		35B3A3F01E554BDF00CD7E6E /* ShowPresentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B3A3EF1E554BDF00CD7E6E /* ShowPresentController.m */; };
+		35B3A3F31E56834B00CD7E6E /* CustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B3A3F21E56834B00CD7E6E /* CustomTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		35B3A3D91E55492200CD7E6E /* 转场动画UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "转场动画UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B3A3DD1E55492200CD7E6E /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		35B3A3DF1E55492200CD7E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35B3A3EB1E554A4500CD7E6E /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		35B3A3EC1E554A4500CD7E6E /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		35B3A3EE1E554BDF00CD7E6E /* ShowPresentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPresentController.h; sourceTree = "<group>"; };
+		35B3A3EF1E554BDF00CD7E6E /* ShowPresentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPresentController.m; sourceTree = "<group>"; };
+		35B3A3F11E56834B00CD7E6E /* CustomTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTransition.h; sourceTree = "<group>"; };
+		35B3A3F21E56834B00CD7E6E /* CustomTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,12 @@
 				35B3A3BC1E55491F00CD7E6E /* AppDelegate.m */,
 				35B3A3BE1E55491F00CD7E6E /* ViewController.h */,
 				35B3A3BF1E55491F00CD7E6E /* ViewController.m */,
+				35B3A3EE1E554BDF00CD7E6E /* ShowPresentController.h */,
+				35B3A3EF1E554BDF00CD7E6E /* ShowPresentController.m */,
+				35B3A3F11E56834B00CD7E6E /* CustomTransition.h */,
+				35B3A3F21E56834B00CD7E6E /* CustomTransition.m */,
+				35B3A3EB1E554A4500CD7E6E /* ShowViewController.h */,
+				35B3A3EC1E554A4500CD7E6E /* ShowViewController.m */,
 				35B3A3C11E55491F00CD7E6E /* Main.storyboard */,
 				35B3A3C41E55491F00CD7E6E /* Assets.xcassets */,
 				35B3A3C61E55491F00CD7E6E /* LaunchScreen.storyboard */,
@@ -279,6 +294,9 @@
 				35B3A3C01E55491F00CD7E6E /* ViewController.m in Sources */,
 				35B3A3BD1E55491F00CD7E6E /* AppDelegate.m in Sources */,
 				35B3A3BA1E55491E00CD7E6E /* main.m in Sources */,
+				35B3A3F01E554BDF00CD7E6E /* ShowPresentController.m in Sources */,
+				35B3A3ED1E554A4500CD7E6E /* ShowViewController.m in Sources */,
+				35B3A3F31E56834B00CD7E6E /* CustomTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E6233Y4S2J;
 				INFOPLIST_FILE = "转场动画/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xinshiyun.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E6233Y4S2J;
 				INFOPLIST_FILE = "转场动画/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xinshiyun.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
